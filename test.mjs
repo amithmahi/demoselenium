@@ -3,7 +3,7 @@ import { assert } from 'chai';
 import * as fs from 'fs';
 
 describe('search', async function () {
-    this.timeout(10000);
+    this.timeout(30000);
     let driver;
 
     if (!fs.existsSync('./screenshots')){
@@ -15,7 +15,7 @@ describe('search', async function () {
         // Automate DuckDuckGo search
         await driver.get('https://duckduckgo.com/');
         const searchBox = await driver.findElement(
-            By.id('searchbox_searchbox__eaWKL'));
+            By.id('searchbox_input'));
         await searchBox.sendKeys(term, Key.ENTER);
 
         // Wait until the result page is loaded
