@@ -3,7 +3,7 @@ import { assert } from 'chai';
 import * as fs from 'fs';
 
 describe('search', async function () {
-    this.timeout(30000);
+    this.timeout(10000);
     let driver;
 
     if (!fs.existsSync('./screenshots')){
